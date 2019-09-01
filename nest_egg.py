@@ -54,8 +54,13 @@ def get_remainder_after_retirement(nest_egg, annual_withdrawal):
 def get_market_growth(amount):
     return amount * MARKET_GROWTH
 
+def format_currency(num):
+    return "${:,}".format(num)
+
 
 annual_withdrawal_num = float(sys.argv[1])
 inflation_adjusted_annual_withdrawal = get_inflation_adjustment(
     annual_withdrawal_num)
-print("${:,}".format(calc_nest_egg(inflation_adjusted_annual_withdrawal)))
+
+estimated_nest_egg = calc_nest_egg(inflation_adjusted_annual_withdrawal)
+print(format_currency(estimated_nest_egg))
