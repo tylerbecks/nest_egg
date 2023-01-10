@@ -2,7 +2,7 @@ This algorithm calculates the amount of money you will need to retire comfortabl
 
 ## How to use
 
-```python
+```bash
 python nest_egg.py 100000
 ```
 
